@@ -1,17 +1,4 @@
 # Challenge
-## pnia v1.1
-
-This exercise is part of Talkdesk's recruitment process. Please do not share it
-publicly.
-
-It is up to you how much effort you put into it and exactly what you deliver. We
-would expect you to spend two to three hours on it, and the result to be a piece
-of working code that will comply exactly with the interface described below and
-can be deployed by following one of the paths under the deployment section.
-
-It is also up to you whether there's any need for documentation (or anything
-else), depending on the problem you've been assigned or the method you chose to
-solve it.
 
 # Problem: phone number information aggregator
 
@@ -218,7 +205,6 @@ The API should return:
     "Banking": 1
   }
 }
-
 ```
 
 
@@ -281,8 +267,8 @@ In addition to the above, if the challenge is accepted, expect for it to be
 explored in more detailed discussions in further stages of the hiring process.
 
 
-## Application
-### The application was deployed on heroku, link follows below:
+# Application
+## The application was deployed on heroku, link follows below:
 
 Endpoint: <br />
 https://talk-desk-pnia.herokuapp.com/aggregate
@@ -290,8 +276,8 @@ https://talk-desk-pnia.herokuapp.com/aggregate
 Health Check:<br />
 https://talk-desk-pnia.herokuapp.com/actuator/health
 
-## How to consume the API
-### POST service, the payload is a list of String, below is an example of a CURL call:
+# Calling the service
+## POST service, the payload is a list of String, below follow an example how do a CURL call:
 
 ```shell
 $ curl --location --request POST 'https://talk-desk-pnia.herokuapp.com/aggregate' \
@@ -325,5 +311,9 @@ $ curl --location --request POST 'https://talk-desk-pnia.herokuapp.com/aggregate
 $ ./validate.sh https://talk-desk-pnia.herokuapp.com/aggregate --ignore-certificate-errors
 ```
 
+### Expected output:
 
+```shell
+ SUCCESS the API complies with the spec
+```
 
