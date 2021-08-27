@@ -305,7 +305,7 @@ $ curl --location --request POST 'https://talk-desk-pnia.herokuapp.com/aggregate
 ]' | pd
 ```
 
-###Expected response:
+### Expected response:
 
 ```json
 {
@@ -318,5 +318,12 @@ $ curl --location --request POST 'https://talk-desk-pnia.herokuapp.com/aggregate
     }
 }
 ```
+
+### Running tests cases via CLI
+
+```shell
+$ ./validate.sh https://talk-desk-pnia.herokuapp.com/aggregate --ignore-certificate-errors
+```
+
 
 
