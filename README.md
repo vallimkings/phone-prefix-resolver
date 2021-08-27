@@ -207,66 +207,6 @@ The API should return:
 }
 ```
 
-
-## Deployment
-
-To ensure the challenge will run in a consistent and controlled environment
-while allowing for language and framework autonomy, we currently support two
-deployment mechanisms, and you may choose whichever one works best for you.
-
-### Docker
-
-Through this route, please submit a tgz or zip with the project directory.
-Running `docker-compose up web` on the project's root must start a web server
-on port `8080` and be reachable on the host machine through
-`http://localhost:8080`. To get started with docker / docker compose, we
-recommend [this page](https://docs.docker.com/compose/gettingstarted/).
-
-### Heroku
-
-Through this route, please submit a tgz or zip with the project directory
-containing a `.git/` repository that can be `git push`ed to heroku and render a
-running web API. I.e. executing the following script should yield a running
-project on https://td-project.herokuapp.com` (granted the user has access to
-that heroku project)
-
-```
-tar -xzvf your_deliverable.tgz -C /tmp/project
-cd /tmp/project
-git remote add heroku https://git.heroku.com/td-project.herokuapp.git
-git push heroku HEAD:master -f
-```
-
-Heroku supports a broad range of languages. For most of them, getting
-something running is as simple as creating a `.git` repository, creating a
-project on heroku and `git push`ing the code to heroku. To get started we
-recommend [this page](https://devcenter.heroku.com/start).
-
-## What happens after you submit the exercise
-
-Part of this exercise's grading will be done through automatic tests. To make
-sure the inputs and outputs of the API match the test's expectations, we have
-bundled a simple `validate.sh` script that will exercise the interface and do a
-basic test.
-
-The automatic tests will be used to determine whether the exercise:
-1. is immediately accepted (if it excels on the tests)
-2. is immediately rejected (if it doesn't pass basic tests)
-3. is manually reviewed (none of the above).
-
-The manual review will value the same parameters we value on our day-to-day code
-reviews:
-* Clarity of the solution
-* Correctness of the output
-* Adequacy of the algorithms and data structures to the problem
-* Adherence to best practices
-* Error handling / resiliency
-* Safety in the face of concurrency
-
-In addition to the above, if the challenge is accepted, expect for it to be
-explored in more detailed discussions in further stages of the hiring process.
-
-
 # Application
 ## The application was deployed on heroku, link follows below:
 
@@ -276,8 +216,8 @@ https://talk-desk-pnia.herokuapp.com/aggregate
 Health Check:<br />
 https://talk-desk-pnia.herokuapp.com/actuator/health
 
-# Calling the service
-## POST service, the payload is a list of String, below follow an example how do a CURL call:
+## Calling the service
+### POST service, the payload is a list of String, below follow an example how do a CURL call:
 
 ```shell
 $ curl --location --request POST 'https://talk-desk-pnia.herokuapp.com/aggregate' \
