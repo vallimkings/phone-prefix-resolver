@@ -245,7 +245,7 @@ $ curl --location --request POST 'https://talk-desk-pnia.herokuapp.com/aggregate
 }
 ```
 
-### Running tests cases via CLI
+### Running tests cases via CLI:
 
 ```shell
 $ ./validate.sh https://talk-desk-pnia.herokuapp.com/aggregate --ignore-certificate-errors
@@ -254,6 +254,6 @@ $ ./validate.sh https://talk-desk-pnia.herokuapp.com/aggregate --ignore-certific
 ### Expected output:
 
 ```shell
- SUCCESS the API complies with the spec
+SUCCESS the API complies with the spec
 ```
 
